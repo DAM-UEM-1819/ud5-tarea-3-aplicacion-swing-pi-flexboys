@@ -8,6 +8,9 @@ public class Controlador {
 	 private ListadosAlumnos listal;
 	 private RegistroAlumnos regal;
 	 private RegistroProfesores regp;
+	 private SaberMas saber;
+	 private Grupos grup;
+	 private Consultas con;
 	 
 	 public void homeCarga() {
 		 home.setVisible(false);
@@ -21,8 +24,18 @@ public class Controlador {
 		 home.setVisible(false);
 		 listal.setVisible(true);
 	 }
-	 
-	 
+	 public void homesaber() {
+		 home.setVisible(false);
+		 saber.setVisible(true);
+	 }
+	 public void homegrup() {
+		 home.setVisible(false);
+		 grup.setVisible(true);
+	 }
+	 public void homeconsulta() {
+		 home.setVisible(false);
+		 con.setVisible(true);
+	 }
 	 
 	 
 }

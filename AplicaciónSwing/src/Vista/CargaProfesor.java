@@ -11,6 +11,8 @@ import java.awt.SystemColor;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class CargaProfesor extends JFrame {
 
@@ -104,5 +106,14 @@ public class CargaProfesor extends JFrame {
 		JLabel lblNmero = new JLabel("N\u00FAmero");
 		lblNmero.setBounds(613, 142, 71, 14);
 		contentPane.add(lblNmero);
+		
+		JButton btnHome = new JButton("HOME");
+		btnHome.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnHome.setBounds(28, 35, 89, 23);
+		contentPane.add(btnHome);
 	}
 }

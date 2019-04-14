@@ -151,17 +151,28 @@ public class Home extends JFrame {
 		btnNewButton_1.setBackground(new Color(0, 153, 204));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				control.homesaber();
 			}
 		});
 		btnNewButton_1.setBounds(72, 70, 130, 66);
 		panel_2.add(btnNewButton_1);
 		
 		JButton btnGrupos = new JButton("Grupos");
+		btnGrupos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				control.homegrup();
+			}
+		});
 		btnGrupos.setBackground(new Color(204, 51, 255));
 		btnGrupos.setBounds(300, 70, 130, 66);
 		panel_2.add(btnGrupos);
 		
 		JButton btnConsultas = new JButton("Consultas");
+		btnConsultas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				control.homeconsulta();
+			}
+		});
 		btnConsultas.setBackground(new Color(0, 153, 51));
 		btnConsultas.setBounds(528, 70, 130, 66);
 		panel_2.add(btnConsultas);
