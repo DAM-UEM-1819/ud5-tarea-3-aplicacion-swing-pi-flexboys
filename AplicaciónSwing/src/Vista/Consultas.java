@@ -43,6 +43,7 @@ public class Consultas extends JFrame {
 
 	private JPanel contentPane;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -95,8 +96,72 @@ public class Consultas extends JFrame {
 		contentPane.add(btnHorasActividadtitulacion);
 		
 		JButton btnHorasActividadTitulacion = new JButton("Horas Actividad\r\nTitulacion y Profesor");
-		btnHorasActividadTitulacion.setBounds(77, 234, 237, 40);
+		btnHorasActividadTitulacion.setBounds(64, 234, 237, 40);
 		contentPane.add(btnHorasActividadTitulacion);
+		
+		JButton button = new JButton("Horas Actividad\r\nTitulacion y Curso");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		button.setBounds(309, 164, 237, 40);
+		contentPane.add(button);
+		
+		JButton button_1 = new JButton("Horas Actividad-Titulacion y Acad");
+		button_1.setBounds(336, 234, 223, 40);
+		contentPane.add(button_1);
+		
+		JButton btnMeses = new JButton("Meses");
+		btnMeses.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnMeses.setBounds(573, 164, 223, 40);
+		contentPane.add(btnMeses);
+		
+		JButton btnSemestres = new JButton("Semestres");
+		btnSemestres.setBounds(588, 234, 223, 40);
+		contentPane.add(btnSemestres);
+		
+		JButton btnTotal = new JButton("Total");
+		btnTotal.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnTotal.setBounds(808, 164, 141, 40);
+		contentPane.add(btnTotal);
+		
+		JButton button_2 = new JButton("Horas Actor Acad");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		button_2.setBounds(982, 164, 163, 40);
+		contentPane.add(button_2);
+		
+		JButton btnHorasTitulacinY = new JButton("Horas Titulaci\u00F3n y mes");
+		btnHorasTitulacinY.setBounds(839, 234, 163, 40);
+		contentPane.add(btnHorasTitulacinY);
+		
+		JButton btnHorasActorTitulacion = new JButton("Horas actor titulacion y Acad");
+		btnHorasActorTitulacion.setBounds(1014, 234, 163, 40);
+		contentPane.add(btnHorasActorTitulacion);
+		
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+			},
+			new String[] {
+				"New column", "New column", "New column", "New column", "New column"
+			}
+		));
+		table.setBounds(226, 331, 801, 257);
+		contentPane.add(table);
 		
 	
 		JScrollPane scroll = new JScrollPane();
