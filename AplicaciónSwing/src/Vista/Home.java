@@ -35,8 +35,11 @@ import java.awt.Button;
 public class Home extends JFrame {
 
 	private JPanel contentPane;
-	private JTable table;
 	private JTable table_1;
+	private Controlador control;
+	private JButton btnRegistros;
+	private JButton btnListados;
+	private JButton btnRegistrar;
 
 	/**
 	 * Launch the application.
@@ -64,83 +67,70 @@ public class Home extends JFrame {
 		contentPane.setBackground(new Color(51, 102, 153));
 		contentPane.setBorder(new LineBorder(Color.BLACK));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
 		
 		JButton btnCargar = new JButton("CARGAR");
+		btnCargar.setBounds(59, 319, 180, 69);
 		btnCargar.setForeground(Color.BLACK);
 		btnCargar.setBackground(new Color(0, 51, 102));
 		btnCargar.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnCargar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				control.homeCarga();
 			}
 		});
 		
 	
 		JScrollPane scroll = new JScrollPane();
-		btnCargar.setBounds(59, 319, 180, 69);
+		contentPane.setLayout(null);
 		contentPane.add(btnCargar);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(321, 387, 671, -254);
-		contentPane.add(panel);
-		panel.setLayout(null);
-		table = new JTable();
-		table.setBounds(0, 0, 671, -254);
-		panel.add(table);
-		
-		
-				table.setFont(new Font("Tahoma", Font.PLAIN, 17));
-				table.setForeground(Color.BLACK);
-				table.setBorder(new LineBorder(new Color(51, 102, 51), 2));
-				table.setModel(new DefaultTableModel(
-					new Object[][] {
-						{null, "erqt", null, null, null, "", null},
-						{null, null, null, null, null, null, null},
-						{null, null, "qet", null, null, "qrtq", null},
-						{null, null, null, null, null, null, null},
-						{null, null, null, null, null, null, null},
-						{null, null, null, null, null, null, null},
-						{null, null, null, null, null, null, null},
-						{null, null, null, null, null, null, null},
-						{null, null, null, null, null, null, null},
-					},
-					new String[] {
-						"Sala", "Inicio", "Fin", "Actividad", "Titulaci\u00F3n", "Grupo", "Profesor"
-					}
-				));
-		
-		JButton btnRegistros = new JButton("REGISTROS");
+		btnRegistros = new JButton("REGISTROS");
+		btnRegistros.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				control.homeReg();
+			}
+		});
+		btnRegistros.setBounds(59, 387, 180, 69);
 		btnRegistros.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnRegistros.setForeground(Color.BLACK);
 		btnRegistros.setBackground(new Color(0, 51, 102));
-		btnRegistros.setBounds(59, 387, 180, 69);
 		contentPane.add(btnRegistros);
 		
 		JLabel lblNewLabel = new JLabel("MEN\u00DA");
+		lblNewLabel.setBounds(59, 140, 180, 35);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lblNewLabel.setForeground(Color.BLACK);
 		lblNewLabel.setBackground(new Color(0, 0, 102));
-		lblNewLabel.setBounds(59, 140, 180, 35);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("LISTADOS");
-		btnNewButton.setForeground(Color.BLACK);
-		btnNewButton.setBackground(new Color(0, 51, 102));
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnNewButton.setBounds(59, 174, 180, 76);
-		contentPane.add(btnNewButton);
+		btnListados = new JButton("LISTADOS");
+		btnListados.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				control.homelistp();
+			}
+		});
+		btnListados.setBounds(59, 174, 180, 76);
+		btnListados.setForeground(Color.BLACK);
+		btnListados.setBackground(new Color(0, 51, 102));
+		btnListados.setFont(new Font("Tahoma", Font.BOLD, 18));
+		contentPane.add(btnListados);
 		
-		JButton btnRegistrar = new JButton("REGISTRAR");
+		btnRegistrar = new JButton("REGISTRAR");
+		btnRegistrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnRegistrar.setBounds(59, 250, 180, 69);
 		btnRegistrar.setForeground(Color.BLACK);
 		btnRegistrar.setBackground(new Color(0, 51, 102));
 		btnRegistrar.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnRegistrar.setBounds(59, 250, 180, 69);
 		contentPane.add(btnRegistrar);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(51, 51, 255));
 		panel_1.setBounds(546, 35, 196, 57);
+		panel_1.setBackground(new Color(51, 51, 255));
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
@@ -151,9 +141,9 @@ public class Home extends JFrame {
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 21));
 		
 		JPanel panel_2 = new JPanel();
+		panel_2.setBounds(317, 446, 727, 203);
 		panel_2.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		panel_2.setBackground(new Color(0, 102, 51));
-		panel_2.setBounds(317, 446, 727, 203);
 		contentPane.add(panel_2);
 		panel_2.setLayout(null);
 		
@@ -177,11 +167,12 @@ public class Home extends JFrame {
 		panel_2.add(btnConsultas);
 		
 		JPanel panel_3 = new JPanel();
-		panel_3.setBackground(new Color(0, 51, 255));
 		panel_3.setBounds(59, 134, 180, 41);
+		panel_3.setBackground(new Color(0, 51, 255));
 		contentPane.add(panel_3);
 		
 		table_1 = new JTable();
+		table_1.setBounds(286, 408, 780, -254);
 		table_1.setModel(new DefaultTableModel(
 			new Object[][] {
 				{null, null, null, null, null, null, null},
@@ -194,12 +185,11 @@ public class Home extends JFrame {
 				"Sala", "Inicio", "Fin", "Actividad", "Titulaci\u00F3n", "Grupo", "Profesor"
 			}
 		));
-		table_1.setBounds(286, 408, 780, -254);
 		contentPane.add(table_1);
 		
 		Panel panel_4 = new Panel();
-		panel_4.setBackground(new Color(204, 0, 51));
 		panel_4.setBounds(85, 22, 124, 84);
+		panel_4.setBackground(new Color(204, 0, 51));
 		contentPane.add(panel_4);
 		panel_4.setLayout(null);
 		
@@ -209,6 +199,7 @@ public class Home extends JFrame {
 		panel_4.add(lblUem);
 		
 		Button button = new Button("Salir");
+		button.setBounds(85, 534, 111, 69);
 	
 		button.setFont(new Font("Dialog", Font.BOLD, 20));
 		button.setForeground(Color.BLACK);
@@ -217,7 +208,6 @@ public class Home extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		button.setBounds(85, 534, 111, 69);
 		contentPane.add(button);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
@@ -237,7 +227,5 @@ public class Home extends JFrame {
 			}
 		});
 	}
-	public JTable getTable() {
-		return table;
-	}
+	
 }
