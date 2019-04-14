@@ -49,6 +49,7 @@ public class RegistroAlumnos extends JFrame {
 	private JLabel lblGrupo;
 	private JTextField textField_4;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private Controlador control;
 
 	/**
 	 * Launch the application.
@@ -153,6 +154,7 @@ public class RegistroAlumnos extends JFrame {
 		btnNewButton.setBackground(new Color(51, 153, 153));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				control.Reghome();
 			}
 		});
 		btnNewButton.setBounds(66, 61, 97, 25);

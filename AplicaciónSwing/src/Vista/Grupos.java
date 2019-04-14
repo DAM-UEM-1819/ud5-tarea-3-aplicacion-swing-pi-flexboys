@@ -45,6 +45,7 @@ public class Grupos extends JFrame {
 	private JTable table_1;
 	private JTextField txtBuscar;
 	private JTable table;
+	private Controlador control;
 
 	/**
 	 * Launch the application.
@@ -101,6 +102,7 @@ public class Grupos extends JFrame {
 		btnNewButton.setBackground(new Color(51, 153, 153));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				control.gruphome();
 			}
 		});
 		btnNewButton.setBounds(66, 61, 97, 25);

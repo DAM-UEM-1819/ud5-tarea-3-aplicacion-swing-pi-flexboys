@@ -18,7 +18,8 @@ public class CargaProfesor extends JFrame {
 
 	private JPanel contentPane;
 	private JTable table;
-
+	private Controlador control;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -110,7 +111,7 @@ public class CargaProfesor extends JFrame {
 		JButton btnHome = new JButton("HOME");
 		btnHome.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				control.cargahome();
 			}
 		});
 		btnHome.setBounds(28, 35, 89, 23);

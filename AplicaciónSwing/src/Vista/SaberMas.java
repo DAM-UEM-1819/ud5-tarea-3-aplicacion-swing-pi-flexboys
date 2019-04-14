@@ -43,6 +43,7 @@ public class SaberMas extends JFrame {
 
 	private JPanel contentPane;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private Controlador control;
 
 	/**
 	 * Launch the application.
@@ -81,6 +82,7 @@ public class SaberMas extends JFrame {
 		btnNewButton.setBackground(new Color(51, 153, 153));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				control.saberhome();
 			}
 		});
 		btnNewButton.setBounds(66, 61, 97, 25);

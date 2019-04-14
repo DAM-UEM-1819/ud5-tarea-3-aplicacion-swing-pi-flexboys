@@ -36,6 +36,33 @@ public class Controlador {
 		 home.setVisible(false);
 		 con.setVisible(true);
 	 }
-	 
+	 public void cargahome() {
+		 cargap.setVisible(false);
+		 home.setVisible(true);
+	 }
+	 public void Reghome() {
+		 regal.setVisible(false);
+		 home.setVisible(true);
+		 
+	 }
+	 public void listphome() {
+		 
+		 listal.setVisible(false);
+		 home.setVisible(true);
+	 }
+	 public void saberhome() {
+		 
+		 saber.setVisible(false);
+		 home.setVisible(true);
+	 }
+	 public void gruphome() {
+		 
+		 grup.setVisible(false);
+		 home.setVisible(true);
+	 }
+	 public void consultahome() {
+		 con.setVisible(false);
+		 home.setVisible(true);
+	 }
 	 
 }

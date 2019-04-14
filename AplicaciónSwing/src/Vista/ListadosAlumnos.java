@@ -51,7 +51,8 @@ public class ListadosAlumnos extends JFrame {
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JTextField textField_1;
 	private JTextField textField_5;
-
+	private Controlador control;
+	private JButton btnHome;
 	/**
 	 * Launch the application.
 	 */
@@ -218,6 +219,15 @@ public class ListadosAlumnos extends JFrame {
 		textField_5.setColumns(10);
 		textField_5.setBounds(723, 458, 116, 22);
 		contentPane.add(textField_5);
+		
+		btnHome = new JButton("HOME");
+		btnHome.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				control.listphome();
+			}
+		});
+		btnHome.setBounds(51, 74, 89, 23);
+		contentPane.add(btnHome);
 		
 	
 		JScrollPane scroll = new JScrollPane();

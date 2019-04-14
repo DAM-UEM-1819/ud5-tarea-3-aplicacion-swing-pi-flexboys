@@ -44,6 +44,7 @@ public class Consultas extends JFrame {
 	private JPanel contentPane;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JTable table;
+	private Controlador control;
 
 	/**
 	 * Launch the application.
@@ -82,6 +83,7 @@ public class Consultas extends JFrame {
 		btnNewButton.setBackground(new Color(51, 153, 153));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				control.consultahome();
 			}
 		});
 		btnNewButton.setBounds(66, 61, 97, 25);
@@ -160,7 +162,7 @@ public class Consultas extends JFrame {
 				"New column", "New column", "New column", "New column", "New column"
 			}
 		));
-		table.setBounds(226, 331, 801, 257);
+		table.setBounds(171, 430, 801, 80);
 		contentPane.add(table);
 		
 	
